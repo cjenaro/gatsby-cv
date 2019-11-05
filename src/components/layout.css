@@ -556,3 +556,7 @@ button {
 .separator {
   font-size: 1.25rem;
 }
+
+.transformIntoXBottom {
+  transform: rotate(40deg) scaleX(1.7) translate(-14px, -20px);
+}
