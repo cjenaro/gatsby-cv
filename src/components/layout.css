@@ -525,38 +525,3 @@ pre tt:after {
     font-size: 100%;
   }
 }
-
-/* My styles */
-
-h5 {
-  font-family: Titillium Web;
-  font-style: normal;
-  font-weight: 900;
-  font-size: 36px;
-  line-height: 102.1%;
-  color: #070707;
-}
-
-header {
-  height: 115px;
-}
-
-p,
-button {
-  font-style: normal;
-  font-family: Roboto;
-  color: #828282;
-}
-
-button {
-  background: 0;
-  border: 0;
-}
-
-.separator {
-  font-size: 1.25rem;
-}
-
-.transformIntoXBottom {
-  transform: rotate(40deg) scaleX(1.7) translate(-14px, -20px);
-}

@@ -9,10 +9,13 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "./header"
+import Header from "./Header/Header"
 import "./layout.css"
 
-const Layout = ({ children }) => {
+const Layout = (props) => {
+
+  console.log(props)
+
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -25,8 +28,8 @@ const Layout = ({ children }) => {
 
   return (
     <React.Fragment>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <main>{children}</main>
+      <Header selectedLanguage={props.selectedLanguage} siteTitle={data.site.siteMetadata.title} />
+      <main>{props.children}</main>
       <footer>
         © {new Date().getFullYear()}, Built with
         {` `}
