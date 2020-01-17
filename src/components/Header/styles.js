@@ -7,6 +7,7 @@ export const StyledHeader = styled.header`
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
+  padding: 0 20px;
 
   .name {
     font-family: Titillium Web;

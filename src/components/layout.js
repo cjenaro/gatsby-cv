@@ -13,9 +13,6 @@ import Header from "./Header/Header"
 import "./layout.css"
 
 const Layout = (props) => {
-
-  console.log(props)
-
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {

@@ -1,70 +1,42 @@
-import * as React from "react"
+import React, { useEffect, useState } from "react"
 import { FormattedMessage } from "gatsby-plugin-intl"
-import styled from "styled-components"
-import { Container } from "react-bootstrap"
+import { StyledHero } from "./styles"
 
-let rightValue = -50
+const Hero = () => {
+  const [right, setRight] = useState(0)
 
-const BackgroundText = styled.div`
-  position: absolute;
-  bottom: 3em;
-  z-index: -1;
-  right: ${rightValue}%;
-`
+  useEffect(() => {
+    const options = {
+      rootMargin: "0px",
+      threshold: 1.0,
+    }
 
-const BigFont = styled.p`
-  text-transform: uppercase;
-  font-family: Titillium Web;
-  font-style: normal;
-  font-weight: 900;
-  font-size: 300px;
-  line-height: 102.1%;
-  color: #ff3f2c;
-  margin-bottom: -80px;
-`
+    const handleObserved = entries => {
+      entries.forEach(entry => {
+        if (entry.intersectionRatio < 1) {
+          setRight(-66)
+          observer.unobserve(entry.target)
+        }
+      })
+    }
 
-const HeroContainer = styled.div`
-  position: relative;
-  min-height: 50vh;
-  overflow: hidden;
-`
+    const observer = new IntersectionObserver(handleObserved, options)
+    observer.observe(document.querySelector('#hero'))
+  }, [])
 
-const WelcomeMessage = styled.div`
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  max-width: 50%;
-  z-index: 1;
-`
+  return (
+    <StyledHero id="hero">
+      <p>
+        <FormattedMessage id="intro"></FormattedMessage>
+      </p>
 
-export default class Hero extends React.Component {
-  componentDidMount() {
-    window.addEventListener("scroll", this.handleScroll)
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener("scroll", this.handleScroll)
-  }
-
-  handleScroll = event => {
-    this.rightValue = window.scrollY
-  }
-
-  render() {
-    return (
-      <HeroContainer>
-        <Container className="position-relative">
-          <WelcomeMessage>
-            <p>
-              <FormattedMessage id="intro"></FormattedMessage>
-            </p>
-          </WelcomeMessage>
-        </Container>
-        <BackgroundText>
-          <BigFont>Front</BigFont>
-          <BigFont>Dev</BigFont>
-        </BackgroundText>
-      </HeroContainer>
-    )
-  }
+      <h1 style={{ transform: `translateX(${right}vw)` }}>
+        Front
+        <br />
+        Dev
+      </h1>
+    </StyledHero>
+  )
 }
+
+export default Hero
