@@ -4,12 +4,14 @@ import Image from "../components/image"
 import Hero from "../components/Hero/Hero"
 import SEO from "../components/seo"
 import { injectIntl } from "gatsby-plugin-intl"
+import Skills from '../components/Skills/Skills'
 
 function IndexPage(props) {
   return (
     <Layout selectedLanguage={props.location.pathname.split('/')[1]}>
       <SEO title="Home" />
-      <Hero></Hero>
+      <Hero />
+      <Skills />
       <Image />
     </Layout>
   )
