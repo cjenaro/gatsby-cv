@@ -13,6 +13,7 @@ import { ThemeProvider } from "styled-components"
 import Header from "../Header"
 import "../layout.css"
 import { LocaleStateProvider } from "../../context/LocaleContext"
+import { StyledLayout } from "./styles"
 
 const main = {
   bg: "#f2f2f2",
@@ -41,17 +42,19 @@ const Layout = props => {
   return (
     <LocaleStateProvider value="en">
       <ThemeProvider theme={themeDark ? dark : main}>
-        <Header
-          changeTheme={changeTheme}
-          selectedLanguage={props.selectedLanguage}
-          siteTitle={data.site.siteMetadata.title}
-        />
-        <main>{props.children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+        <StyledLayout>
+          <Header
+            changeTheme={changeTheme}
+            selectedLanguage={props.selectedLanguage}
+            siteTitle={data.site.siteMetadata.title}
+          />
+          <main>{props.children}</main>
+          <footer>
+            © {new Date().getFullYear()}, Built with
+            {` `}
+            <a href="https://www.gatsbyjs.org">Gatsby</a>
+          </footer>
+        </StyledLayout>
       </ThemeProvider>
     </LocaleStateProvider>
   )
