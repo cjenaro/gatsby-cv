@@ -5,17 +5,23 @@ import Logo from "../Logo"
 import ThemePicker from "../ThemePicker"
 import LanguagePicker from "../LanguagePicker"
 
-const Header = ({ selectedLanguage }) => {
-  const handleLocaleChange = async e => {
-    changeLocale(e.currentTarget.dataset.locale)
-  }
+const Header = () => {
+  // const handleLocaleChange = async e => {
+  //   changeLocale(e.currentTarget.dataset.locale)
+  // }
 
   return (
     <StyledHeader>
       <Logo />
       <nav>
-        <ThemePicker />
-        <LanguagePicker />
+        <ul className="theme-and-lang">
+          <li>
+            <ThemePicker />
+          </li>
+          <li>
+            <LanguagePicker />
+          </li>
+        </ul>
         <ul>
           <li>
             <span>Home</span>

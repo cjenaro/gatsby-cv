@@ -9,33 +9,15 @@ export const StyledHeader = styled.header`
   margin: 0 auto;
   padding: 0 20px;
 
-  .name {
-    font-family: Titillium Web;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 36px;
-    line-height: 102.1%;
-    color: #070707;
-  }
+  ul {
+    display: flex;
 
-  .lang {
-    span {
-      cursor: pointer;
-      color: #828282;
-      font-family: Roboto;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 16px;
-      line-height: 19px;
+    li {
+      margin-left: 40px;
+    }
 
-      &.selected, &:hover {
-        color: #000000;
-      }
+    &.theme-and-lang {
+      justify-content: flex-end;
     }
   }
-
-  svg {
-    cursor: pointer;
-  }
 `
-

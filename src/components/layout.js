@@ -11,6 +11,8 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./Header"
 import "./layout.css"
+import { LocaleStateProvider } from "../context/LocaleContext"
+import { ThemeStateProvider } from "../context/ThemeContext"
 
 const Layout = props => {
   const data = useStaticQuery(graphql`
@@ -24,18 +26,20 @@ const Layout = props => {
   `)
 
   return (
-    <React.Fragment>
-      <Header
-        selectedLanguage={props.selectedLanguage}
-        siteTitle={data.site.siteMetadata.title}
-      />
-      <main>{props.children}</main>
-      <footer>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.org">Gatsby</a>
-      </footer>
-    </React.Fragment>
+    <LocaleStateProvider>
+      <ThemeStateProvider>
+        <Header
+          selectedLanguage={props.selectedLanguage}
+          siteTitle={data.site.siteMetadata.title}
+        />
+        <main>{props.children}</main>
+        <footer>
+          © {new Date().getFullYear()}, Built with
+          {` `}
+          <a href="https://www.gatsbyjs.org">Gatsby</a>
+        </footer>
+      </ThemeStateProvider>
+    </LocaleStateProvider>
   )
 }
 
