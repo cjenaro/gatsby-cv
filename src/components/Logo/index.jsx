@@ -22,9 +22,9 @@ const Logo = () => {
           />
           <text
             transform="translate(389 236)"
-            font-family="PlayfairDisplay-Bold, Playfair Display"
-            font-size="40"
-            font-weight="700"
+            fontFamily="PlayfairDisplay-Bold, Playfair Display"
+            fontSize="40"
+            fontWeight="700"
           >
             <tspan x="0" y="0">
               Jenaro.

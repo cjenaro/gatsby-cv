@@ -1,9 +1,8 @@
 import * as React from "react"
-import Layout from "../components/layout"
-import Image from "../components/image"
+import { injectIntl } from "gatsby-plugin-intl"
+import Layout from "../components/Layout"
 import Hero from "../components/Hero"
 import SEO from "../components/seo"
-import { injectIntl } from "gatsby-plugin-intl"
 import Skills from "../components/Skills"
 import Work from "../components/Work"
 
@@ -14,7 +13,6 @@ function IndexPage(props) {
       <Hero />
       <Skills />
       <Work />
-      <Image />
     </Layout>
   )
 }

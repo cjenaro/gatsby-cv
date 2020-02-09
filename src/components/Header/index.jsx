@@ -5,7 +5,7 @@ import Logo from "../Logo"
 import ThemePicker from "../ThemePicker"
 import LanguagePicker from "../LanguagePicker"
 
-const Header = () => {
+const Header = ({ changeTheme }) => {
   // const handleLocaleChange = async e => {
   //   changeLocale(e.currentTarget.dataset.locale)
   // }
@@ -16,7 +16,7 @@ const Header = () => {
       <nav>
         <ul className="theme-and-lang">
           <li>
-            <ThemePicker />
+            <ThemePicker changeTheme={changeTheme} />
           </li>
           <li>
             <LanguagePicker />
