@@ -8,7 +8,7 @@ import Work from "../components/Work"
 
 function IndexPage(props) {
   return (
-    <Layout selectedLanguage={props.location.pathname.split("/")[1]}>
+    <Layout selectedLanguage={props.intl.locale}>
       <SEO title="Home" />
       <Hero />
       <Skills />

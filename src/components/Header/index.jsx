@@ -1,15 +1,10 @@
 import React from "react"
-import { changeLocale } from "gatsby-plugin-intl"
 import { StyledHeader } from "./styles"
 import Logo from "../Logo"
 import ThemePicker from "../ThemePicker"
 import LanguagePicker from "../LanguagePicker"
 
-const Header = ({ changeTheme }) => {
-  // const handleLocaleChange = async e => {
-  //   changeLocale(e.currentTarget.dataset.locale)
-  // }
-
+const Header = ({ changeTheme, selectedLanguage }) => {
   return (
     <StyledHeader>
       <Logo />
@@ -19,7 +14,7 @@ const Header = ({ changeTheme }) => {
             <ThemePicker changeTheme={changeTheme} />
           </li>
           <li>
-            <LanguagePicker />
+            <LanguagePicker selectedLanguage={selectedLanguage} />
           </li>
         </ul>
         <ul>

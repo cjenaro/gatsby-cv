@@ -13,5 +13,29 @@ export const ThemeStyles = styled.div`
     display: grid;
     align-items: center;
     justify-content: center;
+
+    .icon-container {
+      transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+      opacity: 1;
+
+      &.sun {
+        transform: translateY(-22px);
+      }
+
+      &.moon {
+        transform: translateY(5px);
+      }
+
+      &.hidden {
+        transform: translateY(-50px);
+        opacity: 0;
+      }
+    }
+  }
+
+  span {
+    display: grid;
+    align-items: center;
+    margin-left: 15px;
   }
 `

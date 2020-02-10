@@ -45,8 +45,9 @@ const Layout = props => {
         <StyledLayout>
           <Header
             changeTheme={changeTheme}
-            selectedLanguage={props.selectedLanguage}
+            isDark={themeDark}
             siteTitle={data.site.siteMetadata.title}
+            selectedLanguage={props.selectedLanguage}
           />
           <main>{props.children}</main>
           <footer>
