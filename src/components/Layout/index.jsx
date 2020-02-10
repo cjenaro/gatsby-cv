@@ -17,10 +17,12 @@ import { StyledLayout } from "./styles"
 
 const main = {
   bg: "#f2f2f2",
+  hl: "#fead2a",
 }
 
 const dark = {
   bg: "#222222",
+  hl: "#fead2a",
 }
 
 const Layout = props => {
@@ -50,7 +52,7 @@ const Layout = props => {
             selectedLanguage={props.selectedLanguage}
           />
           <main>{props.children}</main>
-          <footer>
+          <footer id="footer">
             © {new Date().getFullYear()}, Built with
             {` `}
             <a href="https://www.gatsbyjs.org">Gatsby</a>

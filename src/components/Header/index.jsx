@@ -1,4 +1,5 @@
 import React from "react"
+import scrollTo from "gatsby-plugin-smoothscroll"
 import { StyledHeader } from "./styles"
 import Logo from "../Logo"
 import ThemePicker from "../ThemePicker"
@@ -19,22 +20,22 @@ const Header = ({ changeTheme, selectedLanguage }) => {
         </ul>
         <ul>
           <li>
-            <span>Home</span>
+            <button onClick={() => scrollTo("#home")}>Home</button>
           </li>
           <li>
-            <span>About Me</span>
+            <button onClick={() => scrollTo("#about-me")}>About Me</button>
           </li>
           <li>
-            <span>Portfolio</span>
+            <button onClick={() => scrollTo("#portfolio")}>Portfolio</button>
           </li>
           <li>
-            <span>Services</span>
+            <button onClick={() => scrollTo("#services")}>Services</button>
           </li>
           <li>
-            <span>Blog</span>
+            <button onClick={() => scrollTo("#blog")}>Blog</button>
           </li>
           <li>
-            <span>Contact</span>
+            <button onClick={() => scrollTo("#contact")}>Contact</button>
           </li>
         </ul>
       </nav>

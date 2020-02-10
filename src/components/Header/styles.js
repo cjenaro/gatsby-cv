@@ -20,4 +20,13 @@ export const StyledHeader = styled.header`
       justify-content: flex-end;
     }
   }
+
+  button {
+    background: none;
+    border: 0;
+
+    &:hover {
+      color: ${props => props.theme.hl};
+    }
+  }
 `
