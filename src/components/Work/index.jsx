@@ -1,20 +1,19 @@
-import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
+import React from 'react'
+import { useWorks } from '../../hooks/use-works'
 
 const Work = () => {
-  const {
-    allMarkdownRemark: { edges },
-  } = useStaticQuery(pageQuery)
+  const works = useWorks()
+
   return (
     <div className="blog-post-container">
       <div className="blog-post">
-        {edges.map(({ node: { frontmatter, html } }) => {
+        {works.map(work => {
           return (
-            <div key={frontmatter.title} className="work-item">
-              <h1>{frontmatter.title}</h1>
+            <div key={work.title} className="work-item">
+              <h1>{work.title}</h1>
               <div
                 className="blog-post-content"
-                dangerouslySetInnerHTML={{ __html: html }}
+                dangerouslySetInnerHTML={{ __html: work.html }}
               />
             </div>
           )
@@ -25,20 +24,3 @@ const Work = () => {
 }
 
 export default Work
-
-export const pageQuery = graphql`
-  query {
-    allMarkdownRemark {
-      edges {
-        node {
-          frontmatter {
-            title
-            description
-            link
-          }
-          html
-        }
-      }
-    }
-  }
-`

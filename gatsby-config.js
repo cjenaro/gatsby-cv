@@ -44,14 +44,28 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `markdown-files`,
-        path: `${__dirname}/src/markdown-files`,
+        name: `experience`,
+        path: `${__dirname}/src/experience`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `posts`,
+        path: `${__dirname}/src/posts`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `work`,
+        path: `${__dirname}/src/work`,
       },
     },
     `gatsby-transformer-remark`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
-    `gatsby-plugin-smoothscroll`
+    `gatsby-plugin-smoothscroll`,
   ],
 }
