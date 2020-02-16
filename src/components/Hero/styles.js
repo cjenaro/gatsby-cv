@@ -22,7 +22,7 @@ export const StyledHero = styled.section`
   }
 
   .home__text {
-    max-width: 80%;
+    max-width: 86%;
     justify-self: flex-start;
     .hl {
       color: ${props => props.theme.hl};
