@@ -18,11 +18,15 @@ import { StyledLayout } from "./styles"
 const main = {
   bg: "#f2f2f2",
   hl: "#fead2a",
+  btnLightShadow: "#ffffffd6",
+  btnDarkShadow: "#d7d7d7",
 }
 
 const dark = {
   bg: "#222222",
   hl: "#fead2a",
+  btnLightShadow: "#323232",
+  btnDarkShadow: "#1c1c1c",
 }
 
 const Layout = props => {

@@ -244,6 +244,13 @@ h1 {
   --min-font-size: 40;
 }
 
+h2 {
+  --max-font-size-px: 40px;
+  --max-font-size: 40;
+  --min-font-size-px: 30px;
+  --min-font-size: 30;
+}
+
 h3 {
   --max-font-size-px: 30px;
   --max-font-size: 30;

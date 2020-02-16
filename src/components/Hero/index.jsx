@@ -3,6 +3,7 @@ import { FormattedMessage } from "gatsby-plugin-intl"
 import { StyledHero } from "./styles"
 
 import entryway from "../../images/entryway-monochrome-800px.svg"
+import { NewmorphButton } from "../../common-styles/styles"
 
 const Hero = () => {
   return (
@@ -23,6 +24,9 @@ const Hero = () => {
         <p>
           <FormattedMessage id="PERSONAL_DESCRIPTION"></FormattedMessage>
         </p>
+        <NewmorphButton>
+          <FormattedMessage id="CONTACT_ME"></FormattedMessage>
+        </NewmorphButton>
       </div>
       <div className="home__img">
         <img src={entryway} alt="hero" />
