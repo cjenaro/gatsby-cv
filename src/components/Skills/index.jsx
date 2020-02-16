@@ -13,7 +13,18 @@ const Skills = () => {
       <h3 className="description">
         <FormattedMessage id="ABOUT_ME_DESCRIPTION"></FormattedMessage>
       </h3>
-      <StyledSkills></StyledSkills>
+      <StyledSkills>
+        <div>
+          <h3 className="subtitle">
+            <FormattedMessage id="PERSONAL_DETAILS"></FormattedMessage>
+          </h3>
+        </div>
+        <div>
+          <h3 className="subtitle">
+            <FormattedMessage id="MY_SKILLS"></FormattedMessage>
+          </h3>
+        </div>
+      </StyledSkills>
     </StyledSection>
   )
 }

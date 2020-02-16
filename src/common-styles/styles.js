@@ -28,6 +28,11 @@ export const StyledSection = styled.section`
     margin-bottom: 45px;
     font-weight: 100;
   }
+
+  .subtitle {
+    text-transform: uppercase;
+    color: ${props => props.theme.hl};
+  }
 `
 
 export const NewmorphButton = styled.button`
