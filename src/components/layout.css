@@ -1,9 +1,15 @@
 html {
-  font-family: "Roboto", sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  --max-vw-px: 1920px;
+  --max-vw: 1920;
+  --min-vw-px: 375px;
+  --min-vw: 375;
 }
 body {
+  color: #636363;
+  font-family: "Roboto", sans-serif;
+  font-weight: lighter;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -185,7 +191,6 @@ textarea {
   font: inherit;
 }
 html {
-  font: 112.5%/1.45em georgia, serif;
   box-sizing: border-box;
   overflow-y: scroll;
 }
@@ -199,8 +204,7 @@ html {
   box-sizing: inherit;
 }
 body {
-  color: hsla(0, 0%, 0%, 0.8);
-  font-weight: normal;
+  color: #636363;
   word-wrap: break-word;
   font-kerning: normal;
   -moz-font-feature-settings: "kern", "liga", "clig", "calt";
@@ -225,8 +229,28 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Titillium Web";
+  font-family: "Roboto", sans-serif;
+  font-size: calc(
+    var(--min-font-size-px) + (var(--max-font-size) - var(--min-font-size)) *
+      ((100vw - var(--min-vw-px)) / (var(--max-vw) - var(--min-vw)))
+  );
+  margin: 0;
 }
+
+h1 {
+  --max-font-size-px: 60px;
+  --max-font-size: 60;
+  --min-font-size-px: 40px;
+  --min-font-size: 40;
+}
+
+h3 {
+  --max-font-size-px: 30px;
+  --max-font-size: 30;
+  --min-font-size-px: 20px;
+  --min-font-size: 20;
+}
+
 hgroup {
   margin-left: 0;
   margin-right: 0;

@@ -1,5 +1,8 @@
 {
-  "intro": "Hey, my name is Jenaro and I’m a Front End Developer from Córdoba, Argentina with a true passion for code and all things web. Let’s work together and create something great!",
+  "PERSONAL_DESCRIPTION": "I currently live in Córdoba, Argentina. Even tough I'm more inclined to front-end I like working with backend too. I have a true passion for code and all things web. Let’s work together and create something great!",
   "DARK_MODE": "Enable Dark Mode",
-  "LIGHT_MODE": "Enable Light Mode"
+  "LIGHT_MODE": "Enable Light Mode",
+  "GREETING": "Hi There",
+  "I_AM": "I'm",
+  "JOB_TITLE": "Full-stack developer"
 }

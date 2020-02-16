@@ -37,9 +37,11 @@ const ThemePicker = ({ changeTheme }) => {
         </div>
       </div>
       <span>
-        <FormattedMessage
-          id={`${themeContext.bg === "#f2f2f2" ? "DARK_MODE" : "LIGHT_MODE"}`}
-        ></FormattedMessage>
+        <strong>
+          <FormattedMessage
+            id={`${themeContext.bg === "#f2f2f2" ? "DARK_MODE" : "LIGHT_MODE"}`}
+          ></FormattedMessage>
+        </strong>
       </span>
     </ThemeStyles>
   )

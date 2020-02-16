@@ -5,8 +5,8 @@ export const StyledHeader = styled.header`
   display: flex;
   max-width: 1200px;
   justify-content: space-between;
-  align-items: center;
-  margin: 0 auto;
+  align-items: flex-end;
+  margin: 0 auto 100px;
   padding: 0 20px;
 
   ul {
@@ -18,6 +18,8 @@ export const StyledHeader = styled.header`
 
     &.theme-and-lang {
       justify-content: flex-end;
+      margin-bottom: 50px;
+      margin-top: 100px;
     }
   }
 

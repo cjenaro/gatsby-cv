@@ -19,11 +19,11 @@ export const ThemeStyles = styled.div`
       opacity: 1;
 
       &.sun {
-        transform: translateY(-22px);
+        transform: translateY(-10px);
       }
 
       &.moon {
-        transform: translateY(5px);
+        transform: translateY(10px);
       }
 
       &.hidden {
