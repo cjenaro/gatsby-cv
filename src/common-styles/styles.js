@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
 export const StyledSection = styled.section`
   padding: 200px 20px;
@@ -12,7 +12,7 @@ export const StyledSection = styled.section`
     color: ${props => props.theme.hl};
 
     &:before {
-      content: "";
+      content: '';
       width: 58px;
       height: 58px;
       background-color: #63636311;
@@ -32,6 +32,11 @@ export const StyledSection = styled.section`
   .subtitle {
     text-transform: uppercase;
     color: ${props => props.theme.hl};
+  }
+
+  .neumorph {
+    box-shadow: -5px -5px 6px ${props => props.theme.btnLightShadow},
+      5px 5px 6px ${props => props.theme.btnDarkShadow};
   }
 `
 
