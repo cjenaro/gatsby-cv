@@ -9,6 +9,7 @@ function Experience() {
       <h2 className="title">
         <FormattedMessage id="EXPERIENCE"></FormattedMessage>
       </h2>
+      <div>timeline</div>
     </StyledSection>
   )
 }
