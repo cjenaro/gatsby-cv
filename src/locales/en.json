@@ -4,5 +4,12 @@
   "LIGHT_MODE": "Enable Light Mode",
   "GREETING": "Hi There",
   "I_AM": "I'm",
-  "JOB_TITLE": "Full-stack developer"
+  "JOB_TITLE": "Full-stack developer",
+  "ABOUT_ME": "About Me",
+  "PERSONAL_DETAILS": "Personal Details",
+  "MY_SKILLS": "My Skills",
+  "EXPERIENCE": "Experience",
+  "MY_PORTFOLIO": "My Portfolio",
+  "MY_PORTFOLIO_DESCRIPTION": "These are some of the projects I've been part of.",
+  "VISIT_WEBSITE": "Visit website"
 }

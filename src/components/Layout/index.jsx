@@ -5,28 +5,30 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import * as React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
-import { ThemeProvider } from "styled-components"
+import * as React from 'react'
+import PropTypes from 'prop-types'
+import { useStaticQuery, graphql } from 'gatsby'
+import { ThemeProvider } from 'styled-components'
 
-import Header from "../Header"
-import "../layout.css"
-import { LocaleStateProvider } from "../../context/LocaleContext"
-import { StyledLayout } from "./styles"
+import Header from '../Header'
+import '../layout.css'
+import { LocaleStateProvider } from '../../context/LocaleContext'
+import { StyledLayout } from './styles'
 
 const main = {
-  bg: "#f2f2f2",
-  hl: "#fead2a",
-  btnLightShadow: "#ffffffd6",
-  btnDarkShadow: "#d7d7d7",
+  bg: '#f2f2f2',
+  hl: '#fead2a',
+  btnLightShadow: '#ffffffd6',
+  btnDarkShadow: '#d7d7d7',
+  color: '#636363',
 }
 
 const dark = {
-  bg: "#222222",
-  hl: "#fead2a",
-  btnLightShadow: "#323232",
-  btnDarkShadow: "#1c1c1c",
+  bg: '#222222',
+  hl: '#fead2a',
+  btnLightShadow: '#323232',
+  btnDarkShadow: '#1c1c1c',
+  color: '#f0f0f0',
 }
 
 const Layout = props => {

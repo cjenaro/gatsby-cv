@@ -10,6 +10,13 @@ export const useWorks = () => {
               title
               description
               link
+              image {
+                childImageSharp {
+                  fluid {
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+              }
             }
             html
           }
@@ -22,6 +29,7 @@ export const useWorks = () => {
     title: node.frontmatter.title,
     description: node.frontmatter.description,
     link: node.frontmatter.link,
+    image: node.frontmatter.image.childImageSharp.fluid,
     html: node.html,
   }))
 }
