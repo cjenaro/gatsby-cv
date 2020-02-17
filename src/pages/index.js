@@ -6,6 +6,7 @@ import SEO from '../components/seo'
 import Skills from '../components/Skills'
 import Work from '../components/Work'
 import Experience from '../components/Experience'
+import Services from '../components/Services'
 
 function IndexPage(props) {
   return (
@@ -15,6 +16,7 @@ function IndexPage(props) {
       <Skills />
       <Experience />
       <Work />
+      <Services />
     </Layout>
   )
 }
