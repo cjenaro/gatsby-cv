@@ -47,7 +47,7 @@ const ServicesContent = styled.div`
 const Services = () => {
   const img = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "../images/ux-ui.png" }) {
+      image: file(relativePath: { eq: "frontBackUXUI@2x.png" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid_withWebp
@@ -57,15 +57,13 @@ const Services = () => {
     }
   `)
 
-  console.log(img)
-
   return (
     <StyledSection>
       <h2 className="title">
         <FormattedMessage id="SERVICES"></FormattedMessage>
       </h2>
       <ServicesContent className="neumorph">
-        <Img fluid={img.childImageSharp.fluid} />
+        <Img fluid={img.image.childImageSharp.fluid} alt="UX." />
         <ul className="services">
           {services.map(service => (
             <li>
