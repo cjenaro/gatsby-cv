@@ -1,12 +1,24 @@
 import React from 'react'
 import { FormattedMessage } from 'gatsby-plugin-intl'
+import ReactMarkdown from 'react-markdown'
 
 import { StyledSkills } from './styles'
 import { StyledSection } from '../../common-styles/styles'
 import svelte from '../../images/svelte-android-chrome-512@2x.png'
 import gatsby from '../../images/gatsby-icon.png'
+import { useStaticQuery, graphql } from 'gatsby'
 
 const Skills = () => {
+  const githubData = useStaticQuery(graphql`
+    query {
+      githubRepository {
+        object {
+          text
+        }
+      }
+    }
+  `)
+
   return (
     <StyledSection>
       <h2 className="title">
@@ -16,10 +28,11 @@ const Skills = () => {
         <FormattedMessage id="ABOUT_ME_DESCRIPTION"></FormattedMessage>
       </h3>
       <StyledSkills>
-        <div>
+        <div className="certificates">
           <h3 className="subtitle">
             <FormattedMessage id="CERTIFICATIONS"></FormattedMessage>
           </h3>
+          <ReactMarkdown source={githubData.githubRepository.object.text} />
         </div>
         <div>
           <h3 className="subtitle">

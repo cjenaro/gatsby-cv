@@ -4,6 +4,41 @@ export const StyledSkills = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
 
+  .certificates {
+    a {
+      color: ${props => props.theme.color};
+
+      &:hover,
+      &:active {
+        color: ${props => props.theme.hl};
+      }
+    }
+
+    ul {
+      padding: 0;
+      font-size: 30px;
+      font-weight: 400;
+      margin-top: 50px;
+
+      li > a {
+        text-align: left;
+      }
+
+      li > ul {
+        font-size: 20px;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        margin-left: 0;
+        margin-top: 10px;
+
+        > li {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+
   .skills {
     margin-top: 50px;
     padding: 20px;

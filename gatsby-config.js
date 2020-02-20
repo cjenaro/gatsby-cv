@@ -67,5 +67,24 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
     `gatsby-plugin-smoothscroll`,
+    {
+      resolve: 'gatsby-source-github',
+      options: {
+        headers: {
+          Authorization: `Bearer efa74139ef7b13741a2426825d9f2f9647900e29`, // https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/
+        },
+        queries: [
+          `query {
+            repository(owner: "jenaro94", name: "certificates") {
+              object(expression: "master:README.md") {
+                ... on Blob {
+                  text
+                }
+              }
+            }
+          }`,
+        ],
+      },
+    },
   ],
 }

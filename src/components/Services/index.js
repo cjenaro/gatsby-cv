@@ -7,11 +7,6 @@ import Img from 'gatsby-image'
 
 const services = [
   {
-    title: 'UX_UI_DESIGN',
-    description: 'UX_UI_DESIGN_DESCRIPTION',
-    img: '',
-  },
-  {
     title: 'FRONT_END',
     description: 'FRONT_END_DESCRIPTION',
     img: '',
@@ -19,6 +14,11 @@ const services = [
   {
     title: 'BACK_END',
     description: 'BACK_END_DESCRIPTION',
+    img: '',
+  },
+  {
+    title: 'UX_UI_DESIGN',
+    description: 'UX_UI_DESIGN_DESCRIPTION',
     img: '',
   },
 ]
@@ -66,7 +66,7 @@ const Services = () => {
         <Img fluid={img.image.childImageSharp.fluid} alt="UX." />
         <ul className="services">
           {services.map(service => (
-            <li>
+            <li key={service.title}>
               <div className="service neumorph">
                 <img src={service.img} alt="service" />
                 <h5 className="service__title">

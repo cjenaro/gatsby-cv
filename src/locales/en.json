@@ -6,7 +6,7 @@
   "I_AM": "I'm",
   "JOB_TITLE": "Full-stack developer",
   "ABOUT_ME": "About Me",
-  "ABOUT_ME_DESCRIPTIONS": "Some information about myself",
+  "ABOUT_ME_DESCRIPTION": "Some information about myself",
   "PERSONAL_DETAILS": "Personal Details",
   "MY_SKILLS": "My Skills",
   "EXPERIENCE": "Experience",
@@ -22,5 +22,5 @@
   "BACK_END_DESCRIPTION": "Back End",
   "CONTACT_ME": "Contact me",
   "CONTACT": "Contact",
-  "CONTACT_DESCRIPTION": "Please write me an email."
+  "CONTACT_DESCRIPTION": "If I can help you build something please write me an email."
 }
