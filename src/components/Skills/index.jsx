@@ -18,7 +18,7 @@ const Skills = () => {
       <StyledSkills>
         <div>
           <h3 className="subtitle">
-            <FormattedMessage id="PERSONAL_DETAILS"></FormattedMessage>
+            <FormattedMessage id="CERTIFICATIONS"></FormattedMessage>
           </h3>
         </div>
         <div>

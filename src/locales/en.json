@@ -6,10 +6,21 @@
   "I_AM": "I'm",
   "JOB_TITLE": "Full-stack developer",
   "ABOUT_ME": "About Me",
+  "ABOUT_ME_DESCRIPTIONS": "Some information about myself",
   "PERSONAL_DETAILS": "Personal Details",
   "MY_SKILLS": "My Skills",
   "EXPERIENCE": "Experience",
   "MY_PORTFOLIO": "My Portfolio",
   "MY_PORTFOLIO_DESCRIPTION": "These are some of the projects I've been part of.",
-  "VISIT_WEBSITE": "Visit website"
+  "VISIT_WEBSITE": "Visit website",
+  "CERTIFICATIONS": "Certifications",
+  "UX_UI_DESIGN": "UX/UI Design",
+  "UX_UI_DESIGN_DESCRIPTION": "UX/UI Design",
+  "FRONT_END": "Front End",
+  "FRONT_END_DESCRIPTION": "Front End",
+  "BACK_END": "Back End",
+  "BACK_END_DESCRIPTION": "Back End",
+  "CONTACT_ME": "Contact me",
+  "CONTACT": "Contact",
+  "CONTACT_DESCRIPTION": "Please write me an email."
 }
