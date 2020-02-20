@@ -1,16 +1,10 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import * as React from 'react'
 import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
 import { ThemeProvider } from 'styled-components'
 
 import Header from '../Header'
+import Footer from '../Footer'
 import '../layout.css'
 import { LocaleStateProvider } from '../../context/LocaleContext'
 import { StyledLayout } from './styles'
@@ -58,11 +52,7 @@ const Layout = props => {
             selectedLanguage={props.selectedLanguage}
           />
           <main>{props.children}</main>
-          <footer id="footer">
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
-          </footer>
+          <Footer />
         </StyledLayout>
       </ThemeProvider>
     </LocaleStateProvider>
