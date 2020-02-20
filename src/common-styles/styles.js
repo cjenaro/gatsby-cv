@@ -34,9 +34,87 @@ export const StyledSection = styled.section`
     color: ${props => props.theme.hl};
   }
 
+  @keyframes shadowFadeIn {
+    0% {
+      box-shadow: inset -5px -5px 6px ${props => props.theme.btnLightShadow},
+        inset 5px 5px 6px ${props => props.theme.btnDarkShadow};
+      background-image: linear-gradient(
+        145deg,
+        ${props => props.theme.btnLightShadow},
+        ${props => props.theme.btnDarkShadow}25
+      );
+    }
+    50% {
+      box-shadow: none;
+      background-image: none;
+    }
+    100% {
+      box-shadow: -5px -5px 6px ${props => props.theme.btnLightShadow},
+        5px 5px 6px ${props => props.theme.btnDarkShadow};
+      background-image: linear-gradient(
+        145deg,
+        ${props => props.theme.btnDarkShadow}25,
+        ${props => props.theme.btnLightShadow}
+      );
+    }
+  }
+
+  @keyframes shadowFadeOut {
+    0% {
+      box-shadow: -5px -5px 6px ${props => props.theme.btnLightShadow},
+        5px 5px 6px ${props => props.theme.btnDarkShadow};
+      background-image: linear-gradient(
+        145deg,
+        ${props => props.theme.btnDarkShadow}25,
+        ${props => props.theme.btnLightShadow}
+      );
+    }
+    50% {
+      box-shadow: none;
+      background-image: none;
+    }
+    100% {
+      box-shadow: inset -5px -5px 6px ${props => props.theme.btnLightShadow},
+        inset 5px 5px 6px ${props => props.theme.btnDarkShadow};
+      background-image: linear-gradient(
+        145deg,
+        ${props => props.theme.btnLightShadow},
+        ${props => props.theme.btnDarkShadow}25
+      );
+    }
+  }
+
   .neumorph {
     box-shadow: -5px -5px 6px ${props => props.theme.btnLightShadow},
       5px 5px 6px ${props => props.theme.btnDarkShadow};
+    background-image: linear-gradient(
+      145deg,
+      ${props => props.theme.btnDarkShadow}25,
+      ${props => props.theme.btnLightShadow}
+    );
+
+    &.inset {
+      box-shadow: inset -5px -5px 6px ${props => props.theme.btnLightShadow},
+        inset 5px 5px 6px ${props => props.theme.btnDarkShadow};
+      background-image: linear-gradient(
+        145deg,
+        ${props => props.theme.btnLightShadow},
+        ${props => props.theme.btnDarkShadow}25
+      );
+      animation: shadowFadeOut 0.3s ease-in-out;
+
+      &:hover {
+        box-shadow: -5px -5px 6px ${props => props.theme.btnLightShadow},
+          5px 5px 6px ${props => props.theme.btnDarkShadow};
+
+        animation: shadowFadeIn 0.3s ease-in-out;
+        background-image: linear-gradient(
+          145deg,
+          ${props => props.theme.btnDarkShadow}25,
+          ${props => props.theme.btnLightShadow}
+        );
+      }
+    }
   }
 `
 
@@ -50,6 +128,11 @@ export const NewmorphButton = styled.button`
     5px 5px 6px ${props => props.theme.btnDarkShadow};
   border-radius: 16px;
   transition: box-shadow 0.2s ease-in-out;
+  background-image: linear-gradient(
+    145deg,
+    ${props => props.theme.btnDarkShadow}25,
+    ${props => props.theme.btnLightShadow}
+  );
 
   &:hover {
     box-shadow: -7px -7px 4px ${props => props.theme.btnLightShadow},

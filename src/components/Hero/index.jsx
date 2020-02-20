@@ -1,9 +1,9 @@
-import React from "react"
-import { FormattedMessage } from "gatsby-plugin-intl"
-import { StyledHero } from "./styles"
+import React from 'react'
+import { FormattedMessage } from 'gatsby-plugin-intl'
+import { StyledHero } from './styles'
 
-import entryway from "../../images/entryway-monochrome-800px.svg"
-import { NewmorphButton } from "../../common-styles/styles"
+import entryway from '../../images/entryway-monochrome-800px.svg'
+import { NewmorphButton } from '../../common-styles/styles'
 
 const Hero = () => {
   return (
@@ -15,7 +15,7 @@ const Hero = () => {
           </strong>
         </h3>
         <h1>
-          <FormattedMessage id="I_AM"></FormattedMessage>{" "}
+          <FormattedMessage id="I_AM"></FormattedMessage>{' '}
           <strong>Jenaro Calvino</strong>
         </h1>
         <h3 className="job-title">

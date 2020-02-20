@@ -46,7 +46,7 @@ const ExperienceCard = styled.div`
   }
 
   &:hover {
-    transform: scale(1.3);
+    transform: scale(1.1);
   }
 `
 
@@ -66,7 +66,7 @@ const Experience = () => {
       </h2>
       <Timeline className="timeline">
         {experiences.map(experience => (
-          <ExperienceCard className="neumorph">
+          <ExperienceCard className="neumorph inset">
             <h5 className="experience__title">{experience.title}</h5>
             <p className="experience__dates">
               <em>{experience.dates}</em>
