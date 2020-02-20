@@ -116,6 +116,16 @@ export const StyledSection = styled.section`
       }
     }
   }
+
+  @media (max-width: 375px) {
+    .title {
+      padding-left: 22px;
+
+      &:before {
+        left: 0;
+      }
+    }
+  }
 `
 
 export const NewmorphButton = styled.button`

@@ -33,6 +33,13 @@ const ServicesContent = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    li {
+      width: 30%;
+      min-width: 230px;
+      margin-bottom: 25px;
+    }
 
     .service {
       display: flex;
@@ -40,6 +47,7 @@ const ServicesContent = styled.div`
       align-items: center;
       justify-content: space-around;
       border-radius: 50px;
+      height: 360px;
     }
   }
 `
