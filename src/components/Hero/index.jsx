@@ -2,11 +2,24 @@ import React from 'react'
 import { FormattedMessage } from 'gatsby-plugin-intl'
 import { StyledHero } from './styles'
 
-import entryway from '../../images/entryway-monochrome-800px.svg'
 import { NewmorphButton } from '../../common-styles/styles'
 import scrollTo from 'gatsby-plugin-smoothscroll'
+import { useStaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
 const Hero = () => {
+  const img = useStaticQuery(graphql`
+    query {
+      image: file(relativePath: { eq: "entryway-monochrome-800px.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
+          }
+        }
+      }
+    }
+  `)
+
   return (
     <StyledHero id="home" className="home">
       <div className="home__text">
@@ -30,7 +43,7 @@ const Hero = () => {
         </NewmorphButton>
       </div>
       <div className="home__img">
-        <img src={entryway} alt="hero" />
+        <Img fluid={img.image.childImageSharp.fluid} alt="Hero." />
       </div>
     </StyledHero>
   )

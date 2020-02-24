@@ -30,6 +30,10 @@ export const StyledHero = styled.section`
     }
   }
 
+  .home__img {
+    width: 78%;
+  }
+
   .job-title {
     margin: 14px 0 30px;
   }

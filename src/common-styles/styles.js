@@ -4,6 +4,7 @@ export const StyledSection = styled.section`
   padding: 100px 20px;
   max-width: 1200px;
   margin: 0 auto;
+  color: ${props => props.theme.color};
 
   .title {
     text-transform: uppercase;
@@ -15,7 +16,7 @@ export const StyledSection = styled.section`
       content: '';
       width: 58px;
       height: 58px;
-      background-color: #63636311;
+      background-color: ${props => props.theme.color}11;
       position: absolute;
       z-index: -1;
       bottom: 8px;

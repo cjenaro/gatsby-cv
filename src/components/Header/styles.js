@@ -8,6 +8,7 @@ export const StyledHeader = styled.header`
   align-items: flex-end;
   margin: 0 auto 100px;
   padding: 0 20px;
+  color: ${props => props.theme.color};
 
   ul {
     display: flex;
@@ -27,6 +28,7 @@ export const StyledHeader = styled.header`
     background: none;
     border: 0;
     cursor: pointer;
+    color: ${props => props.theme.color};
 
     &:hover {
       color: ${props => props.theme.hl};
@@ -121,7 +123,7 @@ export const StyledHamburguer = styled.button`
     display: none;
   }
 
-  @media(min-width: 768px) {
+  @media (min-width: 768px) {
     display: none;
   }
 `
