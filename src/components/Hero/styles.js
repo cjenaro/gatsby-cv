@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
 export const StyledHero = styled.section`
   max-width: 1200px;
@@ -32,5 +32,9 @@ export const StyledHero = styled.section`
 
   .job-title {
     margin: 14px 0 30px;
+  }
+
+  @media (max-width: 768px) {
+    padding-top: 50px;
   }
 `
