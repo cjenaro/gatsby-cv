@@ -8,7 +8,6 @@ export const StyledHeader = styled.header`
   align-items: flex-end;
   margin: 0 auto 100px;
   padding: 0 20px;
-  display: block;
 
   ul {
     display: flex;
@@ -119,6 +118,10 @@ export const StyledHamburguer = styled.button`
   z-index: 1000;
 
   &.menu-open {
+    display: none;
+  }
+
+  @media(min-width: 768px) {
     display: none;
   }
 `

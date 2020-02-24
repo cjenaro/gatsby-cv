@@ -23,7 +23,7 @@ const StyledFooter = styled.footer`
     cursor: pointer;
   }
 
-  @media(max-width: 375px) {
+  @media(max-width: 768px) {
     flex-direction: column;
     padding: 20px;
     height: unset;

@@ -117,7 +117,7 @@ export const StyledSection = styled.section`
     }
   }
 
-  @media (max-width: 375px) {
+  @media (max-width: 768px) {
     .title {
       padding-left: 22px;
 
