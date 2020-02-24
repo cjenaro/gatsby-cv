@@ -21,7 +21,7 @@ const WorksContainer = styled.div`
       width: 100%;
       height: 100%;
       opacity: 0;
-      color: #ffffff;
+      color: #222222;
       background-color: ${props => props.theme.hl}99;
       transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out;
       display: grid;
@@ -30,6 +30,10 @@ const WorksContainer = styled.div`
       row-gap: 10px;
 
       &:hover {
+        opacity: 1;
+      }
+
+      @media (max-width: 768px) {
         opacity: 1;
       }
     }
@@ -41,7 +45,7 @@ const WorksContainer = styled.div`
     }
 
     &__link {
-      color: #ffffff;
+      color: #222222;
       font-weight: 300;
       text-decoration: underline;
     }
