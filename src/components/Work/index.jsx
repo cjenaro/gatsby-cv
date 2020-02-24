@@ -43,6 +43,7 @@ const WorksContainer = styled.div`
     &__link {
       color: #ffffff;
       font-weight: 300;
+      text-decoration: underline;
     }
 
     &__title {
@@ -55,7 +56,7 @@ const Work = () => {
   const works = useWorks()
 
   return (
-    <StyledSection>
+    <StyledSection id="portfolio">
       <h2 className="title">
         <FormattedMessage id="MY_PORTFOLIO"></FormattedMessage>
       </h2>
@@ -65,6 +66,7 @@ const Work = () => {
       <WorksContainer>
         {works.map(work => (
           <a
+            key={work.title}
             rel="noopener noreferrer"
             href={work.link}
             target="_blank"
@@ -73,14 +75,9 @@ const Work = () => {
             <Img className="work__image" fluid={work.image} />
             <div className="work__content">
               <h4 className="work__title">{work.title}</h4>
-              <a
-                rel="noopener noreferrer"
-                href={work.link}
-                target="_blank"
-                className="work__link"
-              >
+              <span className="work__link">
                 <FormattedMessage id="VISIT_WEBSITE"></FormattedMessage> &rarr;
-              </a>
+              </span>
               <p className="work__description">{work.description}</p>
             </div>
           </a>

@@ -133,6 +133,7 @@ export const NewmorphButton = styled.button`
   padding: 15px 35px;
   color: ${props => props.theme.hl};
   background: none;
+  font-weight: 400;
   cursor: pointer;
   box-shadow: -5px -5px 6px ${props => props.theme.btnLightShadow},
     5px 5px 6px ${props => props.theme.btnDarkShadow};

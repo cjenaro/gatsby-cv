@@ -18,7 +18,7 @@ const StyledContact = styled.div`
 
 const Contact = () => {
   return (
-    <StyledSection>
+    <StyledSection id="contact">
       <h2 className="title">
         <FormattedMessage id="CONTACT"></FormattedMessage>
       </h2>

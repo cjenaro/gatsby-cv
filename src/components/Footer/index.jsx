@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Logo from '../Logo'
+import scrollTo from 'gatsby-plugin-smoothscroll'
 
 const StyledFooter = styled.footer`
   height: 120px;
@@ -27,7 +28,7 @@ const Footer = () => {
   return (
     <StyledFooter id="footer">
       <Logo />
-      <button>Back to top</button>
+      <button onClick={() => scrollTo('#header')}>Back to top</button>
       <div className="date">Jenaro©{new Date().getFullYear()}</div>
     </StyledFooter>
   )

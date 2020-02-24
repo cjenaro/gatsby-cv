@@ -4,6 +4,7 @@ import { StyledHero } from './styles'
 
 import entryway from '../../images/entryway-monochrome-800px.svg'
 import { NewmorphButton } from '../../common-styles/styles'
+import scrollTo from 'gatsby-plugin-smoothscroll'
 
 const Hero = () => {
   return (
@@ -24,7 +25,7 @@ const Hero = () => {
         <p>
           <FormattedMessage id="PERSONAL_DESCRIPTION"></FormattedMessage>
         </p>
-        <NewmorphButton>
+        <NewmorphButton onClick={() => scrollTo('#contact')}>
           <FormattedMessage id="CONTACT_ME"></FormattedMessage>
         </NewmorphButton>
       </div>

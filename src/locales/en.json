@@ -15,12 +15,16 @@
   "VISIT_WEBSITE": "Visit website",
   "CERTIFICATIONS": "Certifications",
   "UX_UI_DESIGN": "UX/UI Design",
-  "UX_UI_DESIGN_DESCRIPTION": "UX/UI Design",
+  "UX_UI_DESIGN_DESCRIPTION": "Subcontract UI/UX design to your desire.",
   "FRONT_END": "Front End",
-  "FRONT_END_DESCRIPTION": "Front End",
+  "FRONT_END_DESCRIPTION": "Can use any variety of front end frameworks solicited, or none if needed!",
   "BACK_END": "Back End",
-  "BACK_END_DESCRIPTION": "Back End",
+  "BACK_END_DESCRIPTION": "I can provide any kind of back end solution, it being a REST API or a GraphQL API.",
   "CONTACT_ME": "Contact me",
   "CONTACT": "Contact",
-  "CONTACT_DESCRIPTION": "If I can help you build something please write me an email."
+  "CONTACT_DESCRIPTION": "If I can help you build something please write me an email.",
+  "HOME": "Home",
+  "PORTFOLIO": "Portfolio",
+  "SERVICES": "Services",
+  "BLOG": "Blog"
 }

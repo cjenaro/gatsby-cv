@@ -47,6 +47,7 @@ const ExperienceCard = styled.div`
 
   &:hover {
     transform: scale(1.1);
+    font-weight: 300;
   }
 `
 
@@ -60,13 +61,13 @@ const Experience = () => {
   const experiences = useExperience()
 
   return (
-    <StyledSection>
+    <StyledSection id="experience">
       <h2 className="title">
         <FormattedMessage id="EXPERIENCE"></FormattedMessage>
       </h2>
       <Timeline className="timeline">
         {experiences.map(experience => (
-          <ExperienceCard className="neumorph inset">
+          <ExperienceCard className="neumorph inset" key={experience.title}>
             <h5 className="experience__title">{experience.title}</h5>
             <p className="experience__dates">
               <em>{experience.dates}</em>

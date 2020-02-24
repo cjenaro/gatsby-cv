@@ -66,7 +66,7 @@ const Services = () => {
   `)
 
   return (
-    <StyledSection>
+    <StyledSection id="services">
       <h2 className="title">
         <FormattedMessage id="SERVICES"></FormattedMessage>
       </h2>
