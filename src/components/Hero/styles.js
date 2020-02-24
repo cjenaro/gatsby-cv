@@ -5,9 +5,10 @@ export const StyledHero = styled.section`
   margin: 0 auto;
   padding: 0 20px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(530px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
   position: relative;
   justify-items: center;
+  grid-gap: 20px;
   align-items: center;
 
   h1,

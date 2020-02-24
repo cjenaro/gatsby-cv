@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const StyledSkills = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
 
   .certificates {
     a {
@@ -76,6 +76,22 @@ export const StyledSkills = styled.div`
           i {
             padding: 10px 15px;
           }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 375px) {
+    .skills {
+      ul {
+        li {
+          i {
+            padding: 0;
+          }
+        }
+
+        &.small {
+          display: none;
         }
       }
     }
