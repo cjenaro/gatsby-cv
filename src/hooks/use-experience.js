@@ -13,6 +13,7 @@ export const useExperience = () => {
               description
               dates
               position
+              order
             }
           }
         }
@@ -20,10 +21,13 @@ export const useExperience = () => {
     }
   `)
 
-  return data.allMarkdownRemark.edges.map(({ node }) => ({
-    title: node.frontmatter.title,
-    description: node.frontmatter.description,
-    dates: node.frontmatter.dates,
-    position: node.frontmatter.position,
-  }))
+  return data.allMarkdownRemark.edges
+    .map(({ node }) => ({
+      title: node.frontmatter.title,
+      description: node.frontmatter.description,
+      dates: node.frontmatter.dates,
+      position: node.frontmatter.position,
+      order: node.frontmatter.order,
+    }))
+    .sort((a, b) => a.order - b.order)
 }

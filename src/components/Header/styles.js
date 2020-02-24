@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
 export const StyledHeader = styled.header`
   height: 210px;
@@ -26,6 +26,7 @@ export const StyledHeader = styled.header`
   button {
     background: none;
     border: 0;
+    cursor: pointer;
 
     &:hover {
       color: ${props => props.theme.hl};

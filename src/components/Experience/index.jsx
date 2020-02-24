@@ -5,15 +5,16 @@ import { StyledSection } from '../../common-styles/styles'
 import styled from 'styled-components'
 
 const ExperienceCard = styled.div`
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
+  padding: 40px;
   border-radius: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   color: ${props => props.theme.color};
-  margin-top: 50px;
+  margin: 50px 30px;
   transform: scale(1);
   will-change: transform;
   transition: transform 0.2s ease-in-out;
