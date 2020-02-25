@@ -1,7 +1,6 @@
 import React from 'react'
 import { FormattedMessage } from 'gatsby-plugin-intl'
 import styled from 'styled-components'
-import { usePosts } from '../../hooks/use-posts'
 import { Link } from 'gatsby'
 import { StyledSection } from '../../common-styles/styles'
 import Img from 'gatsby-image'
@@ -31,9 +30,7 @@ const StyledBlogs = styled.div`
   }
 `
 
-const Blog = () => {
-  const posts = usePosts()
-
+const Blog = ({ posts }) => {
   return (
     <StyledSection id="blog">
       <h2 className="title">

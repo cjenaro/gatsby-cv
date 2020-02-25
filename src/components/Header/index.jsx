@@ -70,7 +70,7 @@ const Header = ({ changeTheme, selectedLanguage }) => {
                 <FormattedMessage id="SERVICES"></FormattedMessage>
               </button>
             </li>
-            {posts.length && (
+            {posts.length > 1 && (
               <li>
                 <button onClick={() => closeAndScroll('#blog')}>
                   <FormattedMessage id="BLOG"></FormattedMessage>

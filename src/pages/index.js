@@ -9,8 +9,11 @@ import Experience from '../components/Experience'
 import Services from '../components/Services'
 import Contact from '../components/Contact'
 import Blog from '../components/Blog'
+import { usePosts } from '../hooks/use-posts'
 
 function IndexPage(props) {
+  const posts = usePosts()
+
   return (
     <Layout selectedLanguage={props.intl.locale}>
       <SEO title="Home" />
@@ -19,7 +22,7 @@ function IndexPage(props) {
       <Experience />
       <Work />
       <Services />
-      <Blog />
+      {posts.length > 1 && <Blog posts={posts} />}
       <Contact />
     </Layout>
   )
