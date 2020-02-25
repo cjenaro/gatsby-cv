@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Logo from '../Logo'
 import scrollTo from 'gatsby-plugin-smoothscroll'
+import { FormattedMessage } from 'gatsby-plugin-intl'
 
 const StyledFooter = styled.footer`
   height: 120px;
@@ -23,7 +24,7 @@ const StyledFooter = styled.footer`
     cursor: pointer;
   }
 
-  @media(max-width: 768px) {
+  @media (max-width: 768px) {
     flex-direction: column;
     padding: 20px;
     height: unset;
@@ -38,7 +39,10 @@ const Footer = () => {
   return (
     <StyledFooter id="footer">
       <Logo />
-      <button onClick={() => scrollTo('#header')}>Back to top</button>
+      <button onClick={() => scrollTo('#home')}>
+        <FormattedMessage id="BACK_TO_TOP"></FormattedMessage>
+        &uarr;
+      </button>
       <div className="date">Jenaro©{new Date().getFullYear()}</div>
     </StyledFooter>
   )
