@@ -11,6 +11,14 @@ const ServicesContent = styled.div`
   padding: 20px;
   border-radius: 50px;
 
+  .big-img {
+    display: none;
+
+    @media(min-width: 768px) {
+      display: block;
+    }
+  }
+
   .services {
     display: flex;
     align-items: center;
@@ -97,7 +105,7 @@ const Services = () => {
         <FormattedMessage id="SERVICES"></FormattedMessage>
       </h2>
       <ServicesContent className="neumorph">
-        <Img fluid={img.image.childImageSharp.fluid} alt="UX." />
+        <Img className="big-img" fluid={img.image.childImageSharp.fluid} alt="UX." />
         <ul className="services">
           {services.map(service => (
             <li key={service.title}>
