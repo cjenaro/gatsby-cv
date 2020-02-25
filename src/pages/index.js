@@ -1,16 +1,29 @@
-import * as React from "react"
-import Layout from "../components/layout"
-import Image from "../components/image"
-import Hero from "../components/Hero"
-import SEO from "../components/seo"
-import { injectIntl } from "gatsby-plugin-intl"
+import * as React from 'react'
+import { injectIntl } from 'gatsby-plugin-intl'
+import Layout from '../components/Layout'
+import Hero from '../components/Hero'
+import SEO from '../components/seo'
+import Skills from '../components/Skills'
+import Work from '../components/Work'
+import Experience from '../components/Experience'
+import Services from '../components/Services'
+import Contact from '../components/Contact'
+import Blog from '../components/Blog'
+import { usePosts } from '../hooks/use-posts'
 
-function IndexPage({ intl }) {
+function IndexPage(props) {
+  const posts = usePosts()
+
   return (
-    <Layout>
+    <Layout selectedLanguage={props.intl.locale}>
       <SEO title="Home" />
-      <Hero></Hero>
-      <Image />
+      <Hero />
+      <Skills />
+      <Experience />
+      <Work />
+      <Services />
+      {posts.length > 1 && <Blog posts={posts} />}
+      <Contact />
     </Layout>
   )
 }
