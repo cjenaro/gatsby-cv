@@ -9,7 +9,15 @@ export const usePosts = () => {
             frontmatter {
               title
               description
-              link
+              slug
+              date
+              image {
+                childImageSharp {
+                  fluid {
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+              }
             }
             html
           }
@@ -21,7 +29,9 @@ export const usePosts = () => {
   return data.allMarkdownRemark.edges.map(({ node }) => ({
     title: node.frontmatter.title,
     description: node.frontmatter.description,
-    link: node.frontmatter.link,
+    slug: node.frontmatter.slug,
+    date: node.frontmatter.date,
     html: node.html,
+    image: node.frontmatter.image.childImageSharp.fluid,
   }))
 }

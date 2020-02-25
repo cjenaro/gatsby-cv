@@ -8,6 +8,7 @@ import Work from '../components/Work'
 import Experience from '../components/Experience'
 import Services from '../components/Services'
 import Contact from '../components/Contact'
+import Blog from '../components/Blog'
 
 function IndexPage(props) {
   return (
@@ -18,6 +19,7 @@ function IndexPage(props) {
       <Experience />
       <Work />
       <Services />
+      <Blog />
       <Contact />
     </Layout>
   )
